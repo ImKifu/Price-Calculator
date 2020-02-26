@@ -7,183 +7,456 @@
 
 
   <!-- Latest compiled CSS -->
-  <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap-grid.css">
-  <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css">
-  <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap-reboot.css">
+  <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap-grid.css">
+  <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap-reboot.css">
 
+
+
+  <script src="jquery-3.4.1.js"></script>
   <!-- Latest compiled JavaScript -->
-  <script src="bootstrap-4.0.0-alpha.6-dist/js/bootstrap.js"></script>
+  <script src="bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+
 
   <!-- My CSS Style -->
   <link rel="stylesheet" href="myCSS.css">
 
 
-  <title>VPS</title>
+  <!-- convert html to pdf -->
+  <script src="jspdf.min.js"></script>
+
+
+
+  <title>Price Calculator</title>
 </head>
 
 <body>
 
+ 
 
+    <section>
+      <div class="container-fluid top-nav">
 
-
-  <section>
-    <div class="container-fluid top-nav">
-
-      <div class="row">
-        <div class="col-sm-1">
-          <p>Trang chu</p>
-          <p>So dien thoai</p>
-        </div>
-
-        <div class="col-sm-10 d-flex justify-content-center">
-          <p>Nhan Hoa VPS</p>
-        </div>
-
-        <div class="col-sm-1">
-          <p>Button</p>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-
-
-  <section class="" id="SECTION01">
-    <img src="Picture/NewOGMOI10.jpg" class="img-fluid" id="myimg" alt="Responsive image">
-    <div class="container-fluid">
-
-
-    </div>
-  </section>
-
-
-  <section>
-    <div class="container">
-
-      <div class="row">
-
-        <div class="col-md-4">
-
-          <img alt="" class="img-fluid" height="" src="Picture/openstackcloud.png" width="">
-
-        </div>
-
-        <div class="col-md-6">
-
-          <p>
-            Hệ thống cung cấp dịch vụ Cloud VPS/Cloud Server của Nhân Hòa được được xây dựng và phát triển trên nền tảng
-            điện toán đám mây OpenStack kết hợp với giải pháp lưu trữ CEPH. Đây là các giải pháp được rất nhiều hãng
-            công nghệ hàng đầu trên thế giới sử dụng để cung cấp hạ tầng về máy chủ, lưu trữ cho các hệ thống với quy mô
-            lớn trong nhiều năm qua như Redhat, IBM, DELL EMC, Cisco, HP.
-          </p>
-          <p>
-            Dịch vụ Cloud VPS/Cloud Server của Nhân Hòa được triển khai trên hạ tầng các cụm máy chủ DELL & HP cực mạnh,
-            sử dụng 100% ổ cứng SSD nhằm tối ưu hóa tốc độ truy suất và độ an toàn dữ liệu cho khách hàng.
-          </p>
-          <p>
-            Ngoài ra, Cloud VPS/ Cloud Server tại Nhân Hòa còn được giám sát liên tục và được sao lưu dữ liệu định kỳ
-            theo nhu cầu của khách hàng.
-          </p>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-
-  <section>
-    <div class="container">
-
-      <div class="row">
-        <div class="col-sm-4 class01">
-          <h1>My First Bootstrap Page</h1>
-          <p>This part is inside a .container class.</p>
-          <p>The .container class provides a responsive fixed width container.</p>
-
-        </div>
-
-        <div class="col-sm-8 class02">
-          <h1>My First Bootstrap Page</h1>
-          <p>This part is inside a .container class.</p>
-          <p>The .container class provides a responsive fixed width containerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr.</p>
-
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-
-
-  <section>
-
-    <div class="container">
-      <h2>Form control: select</h2>
-      <p>The form below contains two dropdown menus (select lists):</p>
-      <form id="form-1" action="action.js">
-        <div class="form-group">
-          <label for="sel1">Select list (select one):</label>
-          <select class="form-control" id="sel1" name="sellist1">
-            <option>None</option>
-            <option>VPS_A</option>
-            <option>VPS_B</option>
-            <option>VPS_C</option>
-            <option>VPS_D</option>
-          </select>
-
-        </div>
-
-        <div>
-          <h1>Custom Range Slider</h1>
-          <p>Drag the slider to display the current value.</p>
-
-          <div class="slidecontainer">
-            <input type="range" min="0" max="100" value="0" step="10" class="slider" id="myRange" name="points1">
-            <p>Value: <span id="demo"></span></p>
+        <div class="row">
+          <div class="col-sm-1">
+            <p>Trang chu</p>
+            <p>So dien thoai</p>
           </div>
 
-          <script>
-            var slider = document.getElementById("myRange");
-            var output = document.getElementById("demo");
-            output.innerHTML = slider.value;
+          <div class="col-sm-10 d-flex justify-content-center">
+            <p>Nhan Hoa VPS</p>
+          </div>
 
-            slider.oninput = function () {
-              output.innerHTML = this.value;
-            }
-          </script>
+          <div class="col-sm-1">
+            <p>Button</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+
+    <section class="" id="SECTION01">
+      <img src="Picture/NewOGMOI10.jpg" class="img-fluid" id="myimg" alt="Responsive image">
+      <div class="container-fluid">
+
+
+      </div>
+    </section>
+
+
+    <section>
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-4">
+
+            <img alt="" class="img-fluid" height="" src="Picture/openstackcloud.png" width="">
+
+          </div>
+
+          <div class="col-md-8">
+
+            <p>
+              Hệ thống cung cấp dịch vụ Cloud VPS/Cloud Server của Nhân Hòa được được xây dựng và phát triển trên nền
+              tảng
+              điện toán đám mây OpenStack kết hợp với giải pháp lưu trữ CEPH. Đây là các giải pháp được rất nhiều hãng
+              công nghệ hàng đầu trên thế giới sử dụng để cung cấp hạ tầng về máy chủ, lưu trữ cho các hệ thống với quy
+              mô
+              lớn trong nhiều năm qua như Redhat, IBM, DELL EMC, Cisco, HP.
+            </p>
+            <p>
+              Dịch vụ Cloud VPS/Cloud Server của Nhân Hòa được triển khai trên hạ tầng các cụm máy chủ DELL & HP cực
+              mạnh,
+              sử dụng 100% ổ cứng SSD nhằm tối ưu hóa tốc độ truy suất và độ an toàn dữ liệu cho khách hàng.
+            </p>
+            <p>
+              Ngoài ra, Cloud VPS/ Cloud Server tại Nhân Hòa còn được giám sát liên tục và được sao lưu dữ liệu định kỳ
+              theo nhu cầu của khách hàng.
+            </p>
+
+          </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section>
+
+      <div class="container" id="testHTMLtoPDF">
+
+        <form id="form-1">
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <h2>CHON GOI DICH VU</h2>
+                <!-- <p>The form below contains two dropdown menus (select lists):</p> -->
+                <!-- <label for="sel1">Select list (select one):</label> -->
+                <select class="form-control" id="options" name="sellist1">
+                  <option>None</option>
+                  <option>VPS_A</option>
+                  <option>VPS_B</option>
+                  <option>VPS_C</option>
+                  <option>VPS_D</option>
+                  <option>VPS_E</option>
+                  <option>VPS_F</option>
+                  <option>SERVER_A</option>
+                  <option>SERVER_B</option>
+                  <option>SERVER_C</option>
+                  <option>SERVER_D</option>
+                  <option>SERVER_E</option>
+                  <option>SERVER_F</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div>
+                <h2>THOI GIAN THUE</h2>
+                <!-- <p>Drag the slider to display the current value.</p> -->
+
+                <div class="slidecontainer">
+                  <input type="range" min="0" max="48" value="0" step="3" class="slider" id="rentalPeriod"
+                    name="points0">
+                  <p>Value: <span id="demo0"></span> thang</p>
+                </div>
+
+                <script>
+                  let slider0 = document.getElementById("rentalPeriod");
+                  let output0 = document.getElementById("demo0");
+                  output0.innerHTML = slider0.value;
+
+                  slider0.oninput = function () {
+                    output0.innerHTML = this.value;
+                  }
+                </script>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="row">
+            <div class="col-md-6">
+              <div>
+                <h2>DANG KI THEM SSD</h2>
+                <!-- <p>Drag the slider to display the current value.</p> -->
+
+                <div class="slidecontainer">
+                  <input type="range" min="0" max="100" value="0" step="10" class="slider" id="additionSSD"
+                    name="points1">
+                  <p>Value: <span id="demo"></span> GB</p>
+                </div>
+                <script>
+                  let slider = document.getElementById("additionSSD");
+                  let output = document.getElementById("demo");
+                  output.innerHTML = slider.value;
+
+                  slider.oninput = function () {
+                    output.innerHTML = this.value;
+                  }
+                </script>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div>
+                <h2>DANG KI THEM RAM</h2>
+                <!-- <p>Drag the slider to display the current value.</p> -->
+
+                <div class="slidecontainer">
+                  <input type="range" min="0" max="64" value="0" step="2" class="slider" id="additionRAM"
+                    name="points2">
+                  <p>Value: <span id="demo2"></span> GB</p>
+                </div>
+
+                <script>
+                  let slider2 = document.getElementById("additionRAM");
+                  let output2 = document.getElementById("demo2");
+                  output2.innerHTML = slider2.value;
+
+                  slider2.oninput = function () {
+                    output2.innerHTML = this.value;
+                  }
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div>
+                <h2>DANG KI THEM IP</h2>
+                <!-- <p>Drag the slider to display the current value.</p> -->
+
+                <div class="slidecontainer">
+                  <input type="range" min="0" max="10" value="0" step="1" class="slider" id="additionIP" name="points3">
+                  <p>Value: <span id="demo3"></span> IP</p>
+                </div>
+
+                <script>
+                  let slider3 = document.getElementById("additionIP");
+                  let output3 = document.getElementById("demo3");
+                  output3.innerHTML = slider3.value;
+
+                  slider3.oninput = function () {
+                    output3.innerHTML = this.value;
+                  }
+                </script>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div>
+                <h2>DANG KI THEM CPU CORE</h2>
+                <!-- <p>Drag the slider to display the current value.</p> -->
+
+                <div class="slidecontainer">
+                  <input type="range" min="0" max="12" value="0" step="2" class="slider" id="additionCORE"
+                    name="points4">
+                  <p>Value: <span id="demo4"></span> CORE</p>
+                </div>
+
+                <script>
+                  let slider4 = document.getElementById("additionCORE");
+                  let output4 = document.getElementById("demo4");
+                  output4.innerHTML = slider4.value;
+
+                  slider4.oninput = function () {
+                    output4.innerHTML = this.value;
+                  }
+                </script>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="custom-control custom-checkbox custom-control-inline mb-3">
+                <input type="checkbox" class="custom-control-input myCheck" id="customCheck1" name="example1">
+                <label class="custom-control-label" for="customCheck1">Dịch vụ quản lý cơ bản</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="custom-control custom-checkbox custom-control-inline mb-3">
+                <input type="checkbox" class="custom-control-input myCheck" id="customCheck2" name="example2">
+                <label class="custom-control-label" for="customCheck2">Dịch vụ quản lý cao cấp</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input myCheck" id="customCheck3" name="example3">
+                <label class="custom-control-label" for="customCheck3">Bản quyền cPanel VPS</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck4" name="example4">
+                <label class="custom-control-label" for="customCheck4">Bản quyền Direct Admin</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck5" name="example5">
+                <label class="custom-control-label" for="customCheck5">Bản quyền Plesk Web Admin Edition (10
+                  Domains)</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck6" name="example6">
+                <label class="custom-control-label" for="customCheck6">Bản quyền Plesk Web App Edition (5
+                  Domains)</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck7" name="example7">
+                <label class="custom-control-label" for="customCheck7">Bản quyền Plesk Web Host Edition (Unlimited
+                  Domains)</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck8" name="example8">
+                <label class="custom-control-label" for="customCheck8">Bản quyền Plesk Web Pro Edition (30
+                  Domains)</label>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+        </form>
+
+
+
+
+      </div>
+    </section>
+
+
+
+    <section>
+      <div class="container">
+        <!-- demo html code -->
+
+        <!-- Name <br />
+    <input id="txtBox" type="text" />
+    <br /><br />
+    Gender <br />
+    <input type="radio" name="rd" value="male" /> Male
+    <input type="radio" name="rd" value="female" /> Female
+    <br /><br /> -->
+        <input class="btn btn-success .btn-lg" id="buttonGet" type="button" value="Show" />
+        <input class="btn btn-outline-danger .btn-lg" id="buttonSet" type="button" value="Clear" />
+        <input class="btn btn-primary .btn-lg" id="buttonCalculate" type="button" value="Calculate" />
+        <p id="result"></p>
+        <br>
+        <p id="calculateDemo"></p>
+    </section>
+  </div>
+
+
+  <section>
+    <div class="container">
+      <table class="table table-striped table-bordered table-hover table-primary">
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+          </tr>
+          <tr>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+          </tr>
+          <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
 
-  <p>Click "Try it" to display the value of each element in the form.</p>
+
+
+
+  <section class="container">
+
+
+    <button onclick="convert_HTML_to_PDF();">
+      Convert HTML to PDF
+    </button>
+
+    <!-- html content to pdf -->
+    <div id="content">
+      <h1> Demo </h1>
+      <p>
+        la la land
+      </p>
+
+
+
+
+
+
+
+
+      
+    </div>
+
+    <div id="elementH">
+
+    </div>
+
+
+  </section>
+
 
   <script>
-    for (; ;) {
-      myFunction();
+
+    function convert_HTML_to_PDF() {
+      var doc = new jsPDF();
+      var elementHTML = $('#content').html();
+      var specialElementHandlers = {
+        '#elementH': function (element, renderer) {
+          return true;
+        }
+      };
+
+      doc.fromHTML(elementHTML, 15, 15, {
+        'width': 170,
+        'elementHandlers': specialElementHandlers
+      });
+
+      // save the pdf
+      doc.save('sameple-document.pdf');
+
     }
 
   </script>
 
-    <button onclick="myFunction()">Try it</button>
- 
-  <p id="demo2"></p>
 
 
 
+  <!-- <script src="action.js"></script> -->
+  <script src="action2.js"></script>
+  <script src="calculate.js"></script>
 
 
-
-  <script src="action.js"></script>
 </body>
 
 </html>
