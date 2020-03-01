@@ -1,35 +1,35 @@
 // set data to array Object
 const SSD_CLOUD_00 = { type: "None", OS: "Linux", price: 0 };
-const SSD_CLOUD_01 = { type: "VPS_A", OS: "Linux", price: 86 };
-const SSD_CLOUD_02 = { type: "VPS_B", OS: "Linux", price: 180 };
-const SSD_CLOUD_03 = { type: "VPS_C", OS: "Linux", price: 399 };
-const SSD_CLOUD_04 = { type: "VPS_D", OS: "Linux", price: 599 };
-const SSD_CLOUD_05 = { type: "VPS_E", OS: "Linux", price: 699 };
-const SSD_CLOUD_06 = { type: "VPS_F", OS: "Linux", price: 1199 };
+const SSD_CLOUD_01 = { type: "VPS_A", OS: "Linux", price: 86000 };
+const SSD_CLOUD_02 = { type: "VPS_B", OS: "Linux", price: 180000 };
+const SSD_CLOUD_03 = { type: "VPS_C", OS: "Linux", price: 399000 };
+const SSD_CLOUD_04 = { type: "VPS_D", OS: "Linux", price: 599000 };
+const SSD_CLOUD_05 = { type: "VPS_E", OS: "Linux", price: 699000 };
+const SSD_CLOUD_06 = { type: "VPS_F", OS: "Linux", price: 1199000 };
 
-const SSD_CLOUD_07 = { type: "SERVER_A", OS: "Linux", price: 1299 };
-const SSD_CLOUD_08 = { type: "SERVER_B", OS: "Linux", price: 1699 };
-const SSD_CLOUD_09 = { type: "SERVER_C", OS: "Linux", price: 2199 };
-const SSD_CLOUD_10 = { type: "SERVER_D", OS: "Linux", price: 2699 };
-const SSD_CLOUD_11 = { type: "SERVER_E", OS: "Linux", price: 3199 };
-const SSD_CLOUD_12 = { type: "SERVER_F", OS: "Linux", price: 4299 };
+const SSD_CLOUD_07 = { type: "SERVER_A", OS: "Linux", price: 1299000 };
+const SSD_CLOUD_08 = { type: "SERVER_B", OS: "Linux", price: 1699000 };
+const SSD_CLOUD_09 = { type: "SERVER_C", OS: "Linux", price: 2199000 };
+const SSD_CLOUD_10 = { type: "SERVER_D", OS: "Linux", price: 2699000 };
+const SSD_CLOUD_11 = { type: "SERVER_E", OS: "Linux", price: 3199000 };
+const SSD_CLOUD_12 = { type: "SERVER_F", OS: "Linux", price: 4299000 };
 
 
 let SSD_CLOUDS = [ SSD_CLOUD_00, SSD_CLOUD_01, SSD_CLOUD_02, SSD_CLOUD_03, SSD_CLOUD_04, SSD_CLOUD_05, SSD_CLOUD_06, SSD_CLOUD_07, SSD_CLOUD_08, SSD_CLOUD_09,
   SSD_CLOUD_10, SSD_CLOUD_11, SSD_CLOUD_12 ];
 
-const option01 = { title: "Đăng ký thêm 10 GB SSD", price: 200 };
-const option02 = { title: "Đăng ký thêm 1GB RAM", price: 200 };
-const option03 = { title: "Đăng ký thêm 1 IP", price: 100 };
-const option04 = { title: "Đăng ký thêm 1 core CPU ", price: 180 };
-const option05 = { title: "Dịch vụ quản lý cơ bản", price: 330 };
-const option06 = { title: "Dịch vụ quản lý cao cấp", price: 999 };
-const option07 = { title: "Bản quyền cPanel VPS", price: 350 };
-const option08 = { title: "Bản quyền Direct Admin", price: 150 };
-const option09 = { title: "Bản quyền Plesk Web Admin Edition (10 Domains)", price: 70 };
-const option10 = { title: "Bản quyền Plesk Web App Edition (5 Domains)", price: 105 };
-const option11 = { title: "Bản quyền Plesk Web Host Edition (Unlimited Domains)", price: 616 };
-const option12 = { title: "Bản quyền Plesk Web Pro Edition (30 Domains) ", price: 176 };
+const option01 = { title: "Đăng ký thêm 10 GB SSD", price: 200000 };
+const option02 = { title: "Đăng ký thêm 1GB RAM", price: 200000 };
+const option03 = { title: "Đăng ký thêm 1 IP", price: 100000 };
+const option04 = { title: "Đăng ký thêm 1 core CPU ", price: 180000 };
+const option05 = { title: "Dịch vụ quản lý cơ bản", price: 330000 };
+const option06 = { title: "Dịch vụ quản lý cao cấp", price: 999000 };
+const option07 = { title: "Bản quyền cPanel VPS", price: 350000 };
+const option08 = { title: "Bản quyền Direct Admin", price: 150000 };
+const option09 = { title: "Bản quyền Plesk Web Admin Edition (10 Domains)", price: 70000 };
+const option10 = { title: "Bản quyền Plesk Web App Edition (5 Domains)", price: 105000 };
+const option11 = { title: "Bản quyền Plesk Web Host Edition (Unlimited Domains)", price: 616000 };
+const option12 = { title: "Bản quyền Plesk Web Pro Edition (30 Domains) ", price: 176000 };
 
 let OPTIONS = [ option01, option02, option03, option04, option05, option06, option07, option08, option09, option10, option11, option12 ];
 
@@ -117,6 +117,10 @@ function calculating( CACHE_ARRAY, SSD_CLOUDS, OPTIONS ){
   //console.log(CACHE_ARRAY[0]);
   //console.log(CACHE_ARRAY[1]);
   console.log(total);
+  //let stringTotal = total.toString();
+  //let newStringTotal = stringTotal.split("", 3);
+  //console.log(newStringTotal);
+  //document.getElementById("calculateDemo").innerHTML = newStringTotal;
   document.getElementById("calculateDemo").innerHTML = total;
 
 }
