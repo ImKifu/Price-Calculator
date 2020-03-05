@@ -51,6 +51,7 @@
   <script src="OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
 
   <script src="OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.js"></script>
+  <script src="OwlCarousel2-2.3.4/src/js/owl.autoplay.js"></script>
 
 
 
@@ -425,20 +426,29 @@
     $(document).ready(function () {
       $("#testimonial-slider").owlCarousel({
         items: 3,
-        itemsDesktop: [1000, 3],
-        itemsDesktopSmall: [979, 2],
-        itemsTablet: [768, 2],
-        itemsMobile: [650, 1],
-        pagination: true,
 
-        loop: true,
-        nav: true,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          }
+        },
 
 
-        navText: [
-          '<svg width="50" height="50" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>',
-          '<svg width="50" height="50" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>' /* icons from https://iconmonstr.com */
-        ]
+  
+
+        loop: true, autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+
+        nav: true
+
 
 
       });
@@ -743,10 +753,10 @@
           </button>
         </div>
       </div>
-   
+
       <!-- <input class="btn btn-primary .btn-lg" id="buttonCalculate" type="button" value="Calculate" /> -->
       <!-- Button to Open the Modal -->
-     
+
       <!-- <p id="result"></p>
       <br> -->
 

@@ -193,17 +193,17 @@ body {
 
 
 .owl-prev, .owl-next {
-  width: 15px;
+  width: 30px;
   height: 100px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   display: block !important;
-  border:0px solid #daad86;
+  border:0px solid #daad86 !important;
 }
 .owl-prev { left: -50px; }
 .owl-next { right: -20px; }
-.owl-prev i, .owl-next i {transform : scale(2,5); color: #daad86;}
+.owl-prev i, .owl-next i {transform : scale(2,5); color: #daad86 !important;}
 
 
 
